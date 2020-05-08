@@ -47,8 +47,7 @@ class Ex18{
 			}else if(avg<70&&avg>=60){
 				System.out.println("학점"+" "+'D'+"학점");
 			}else{
-				System.
-out.println("학점"+" "+'F'+"학점");
+				System.out.println("학점"+" "+'F'+"학점");
 			}
 		}
 
