@@ -57,74 +57,74 @@ class Test3{
 		int lose=0;
 		int draw=0;
 
-
 		while(input!=0){
 		// com 0. 가위  1.바위  2.보
 		// 정수 0~2
 
-		double random = Math.random();
-		// double을 쓰면 0.0 ~ 0.9999999999 결과가 범위로 나온다
-		// (int)(random*10) ==> 0 ~ 9
-		int com = (int)(Math.random()*10);
+			double random = Math.random();
+			// double을 쓰면 0.0 ~ 0.9999999999 결과가 범위로 나온다
+			// (int)(random*10) ==> 0 ~ 9
+			int com = (int)(Math.random()*10);
 
-		while(com>2){
-			com = (int)(Math.random()*10);
-		}
+			while(com>2){
+				com = (int)(Math.random()*10);
+			}
 
-
-		System.out.print("1.가위 2.바위 3.보 0.종료 >>>");
-		input = sc.nextInt();
-		if(input!=0){
-		if(input==1){
-			my="가위";
-			if(com==0){
-				pc="가위";
-				result="비";
-				draw++;
-			}else if(com==1){
-				pc="바위";
-				result="컴퓨터가 이";
-				lose++;
-			}else if(com==2){
-				pc="보";
-				result="당신이 이";
-				win++;
-			}
-		}else if(input==2){
-			my="바위";
-			if(com==0){
-				pc="가위";
-				result="당신이 이";
-				win++;
-			}else if(com==1){
-				pc="바위";
-				result="비";
-				draw++;
-			}else if(com==2){
-				pc="보";
-				result="컴퓨터가 이";
-				lose++;
-			}
-		}else if(input==3){
-			my="보";
-			if(com==0){
-				pc="가위";
-				result="컴퓨터가 이";
-				lose++;
-			}else if(com==1){
-				pc="바위";
-				result="당신이 이";
-				win++;
-			}else if(com==2){
-				pc="보";
-				result="비";
-				draw++;
-			}
-		}
-		System.out.println("당신 : "+my+" , 컴퓨터 : "+pc);
-		System.out.println(result+"겼습니다\n");
-		cnt++;
-		}
+			System.out.print("1.가위 2.바위 3.보 0.종료 >>>");
+			input = sc.nextInt();
+			if(input!=0){
+				if(input==1){
+					my="가위";
+					if(com==0){
+						pc="가위";
+						result="비";
+						draw++;
+					}else if(com==1){
+						pc="바위";
+						result="컴퓨터가 이";
+						lose++;
+					}else if(com==2){
+						pc="보";
+						result="당신이 이";
+						win++;
+					}
+				}else if(input==2){
+					my="바위";
+					if(com==0){
+						pc="가위";
+						result="당신이 이";
+						win++;
+					}else if(com==1){
+						pc="바위";
+						result="비";
+						draw++;
+					}else if(com==2){
+						pc="보";
+						result="컴퓨터가 이";
+						lose++;
+					}
+				}else if(input==3){
+					my="보";
+					if(com==0){
+						pc="가위";
+						result="컴퓨터가 이";
+						lose++;
+					}else if(com==1){
+						pc="바위";
+						result="당신이 이";
+						win++;
+					}else if(com==2){
+						pc="보";
+						result="비";
+						draw++;
+					}
+				}
+				System.out.println("당신 : "+my+" , 컴퓨터 : "+pc);
+				System.out.println(result+"겼습니다\n");
+				cnt++;
+				
+			} // if end
+			
 		} //out while end
 		System.out.println("(전적) 총"+cnt+"게임 중");
 		System.out.println(win+"승 "+draw+"무 "+lose+"패");
