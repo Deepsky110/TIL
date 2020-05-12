@@ -67,7 +67,6 @@ class Ex30{
 			
 			int sum5=1;
 			int su5=1;
-			sum5=sum5*2;
 			while(su5<6){
 				sum5=sum5*2;
 				System.out.println("2의"+su5+"승="+sum5);
