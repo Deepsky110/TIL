@@ -67,6 +67,7 @@ class Ex30{
 			
 			int sum5=1;
 			int su5=1;
+			sum5=sum5*2;
 			while(su5<6){
 				sum5=sum5*2;
 				System.out.println("2의"+su5+"승="+sum5);
@@ -158,3 +159,6 @@ class Ex31{
 2x8=16  3x8=24  4x8=32  5x8=40  6x8=48  7x8=56  8x8=64  9x8=72
 2x9=18  3x9=27  4x9=36  5x9=45  6x9=54  7x9=63  8x9=72  9x9=81
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEzMjczMjk3MDZdfQ==
+-->
