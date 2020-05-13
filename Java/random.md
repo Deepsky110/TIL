@@ -57,6 +57,7 @@ class Test3{
 		int lose=0;
 		int draw=0;
 
+
 		while(input!=0){
 		// com 0. 가위  1.바위  2.보
 		// 정수 0~2
@@ -70,7 +71,8 @@ class Test3{
 				com = (int)(Math.random()*10);
 			}
 
-			System.out.print("1.가위 2.바위 3.보 0.종료 >>>");
+	
+		System.out.print("1.가위 2.바위 3.보 0.종료 >>>");
 			input = sc.nextInt();
 			if(input!=0){
 				if(input==1){
@@ -103,7 +105,8 @@ class Test3{
 						result="컴퓨터가 이";
 						lose++;
 					}
-				}else if(input==3){
+		}
+		}else if(input==3){
 					my="보";
 					if(com==0){
 						pc="가위";
@@ -119,12 +122,13 @@ class Test3{
 						draw++;
 					}
 				}
-				System.out.println("당신 : "+my+" , 컴퓨터 : "+pc);
+		}
+		System.out.println("당신 : "+my+" , 컴퓨터 : "+pc);
 				System.out.println(result+"겼습니다\n");
 				cnt++;
 				
 			} // if end
-			
+			}
 		} //out while end
 		System.out.println("(전적) 총"+cnt+"게임 중");
 		System.out.println(win+"승 "+draw+"무 "+lose+"패");
@@ -195,3 +199,6 @@ class Test4{
 
 } //class end
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbOTc1MDY4NDM5XX0=
+-->
