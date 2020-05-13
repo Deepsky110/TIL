@@ -278,8 +278,7 @@ class Ex26{
 		public static void main(String[] args){
 			// 구구단을 출력하시오
 
-			java.util.Scanner sc
-			=new java.util.Scanner(System.in);
+			java.util.Scanner sc=new java.util.Scanner(System.in);
 			System.out.print("몇 단?");
 			int a=sc.nextInt();
 			for(int i=1; i<=9; i++){
