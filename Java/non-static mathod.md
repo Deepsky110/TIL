@@ -91,40 +91,6 @@ class Ex02{
 		System.out.println("non-static method2");
 	}
 
-}Ex02{
-	/*
-		메서드 호출법칙
-		1. (direct call) non-static method - static method
-		2. (direct call) non-static method - non-static method
-		3. (direct call) static method - static method
-		4. (reference call) static method - non-static method
-	*/
-
-	public static void main(String[] args){
-		//Ex02 me=new Ex02();  //me라는 참조변수를 만든다.
-		//me.func02();
-		func01();
-	}
-
-	public static void func01(){
-		System.out.println("static mehod1");
-		//func11(); //스태틱에서 스태틱 메서드는 직접 호출 가능
-		//func22(); //스태틱-논스태틱 호출이라 참조변수 통해 호출해야함
-	}
-
-	public void func02(){
-		System.out.println("non-static method1");
-		func22();
-	}
-
-	public static void func11(){
-		System.out.println("static mehod2");
-	}
-
-	public void func22(){
-		System.out.println("non-static method2");
-	}
-
 }
 ```
 
