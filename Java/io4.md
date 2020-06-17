@@ -235,3 +235,120 @@ public class Ex10 {
 
 }
 ```
+
+<br>
+
+### ObjectStream으로 쓰기2
+```java
+package com.bit.day26;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+
+public class Ex01 {
+	// Object 스트림 - 쓰기
+	public static void main(String[] args) {
+		
+
+		String path = "data1.bin";
+		File file = new File(path);
+
+		try {
+			if (!file.exists())
+				file.createNewFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		FileOutputStream fos = null;
+		ObjectOutputStream oos = null;
+
+		try {
+			fos = new FileOutputStream(file);
+			oos = new ObjectOutputStream(fos);
+
+			// oos.writeObject(new Student(1,"홍길동",90,80,70));
+			Student stu = new Student(1, "홍길동", 90, 80, 70);
+			oos.writeObject(stu);
+			stu.show();
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (oos != null)
+					oos.close();
+				if (fos != null)
+					fos.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+}
+```
+
+### ObjectStream 읽어오기2
+```java
+package com.bit.day26;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class Ex02 {
+	// Ex01 읽어오기
+	public static void main(String[] args) {
+		// File file = new File("data1.bin");
+
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+
+		try {
+			fis = new FileInputStream("data1.bin"); // 직접 입력 가능
+			ois = new ObjectInputStream(fis);
+
+			Student stu = null;
+			stu = (Student) ois.readObject();
+			stu.show();
+
+			System.out.println("학번:" + stu.num); // 필드에 접근하기
+			System.out.println("이름:" + stu.name);
+			System.out.println("국어:" + stu.kor);
+			System.out.println("영어:" + stu.eng);
+			// System.out.println("수학:"+stu.math);
+			// private int math라 바로 접근 불가, 데이터 값은 있는데 접근 불가
+			System.out.println(stu); // Student의 toString 리턴값
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (ois != null)
+					ois.close();
+				if (fis != null)
+					fis.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+}
+```
