@@ -278,7 +278,8 @@ class Ex26{
 		public static void main(String[] args){
 			// 구구단을 출력하시오
 
-			java.util.Scanner sc=new java.util.Scanner(System.in);
+			java.util.Scanner sc
+			=new java.util.Scanner(System.in);
 			System.out.print("몇 단?");
 			int a=sc.nextInt();
 			for(int i=1; i<=9; i++){
@@ -304,3 +305,6 @@ C:\javaWorkspace>java Ex26
 8 X 8 = 64
 8 X 9 = 72
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwMDU2OTg0XX0=
+-->
