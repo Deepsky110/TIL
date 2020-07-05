@@ -39,3 +39,67 @@
 [데이터 모델링 단계](https://www.notion.so/a55208e3639840ddb0f3adf95171dc26)
 
 [데이터 모델링 관점](https://www.notion.so/e874ca54c61f4fc890f4bbcd3c68291a)
+
+## 데이터 모델링을 위한 ERD(Entity Relation ship Diagram)
+
+- 1976년 피터첸(Peter Chen)이 Entity Relationship Model 표기법을 만들었으며 데이터 모델링의 사실상 표준으로 사용되고 있다.
+- 엔티티(Entity)와 엔티티 간의 관계를 정의하는 모델링 방법
+
+(1) ERD 작성절차
+
+① 엔티티를 도출하고 그린다
+
+- 업무에서 관리해야 하는 집합을 도출한다.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2427b42b-4596-4ddb-8462-fdafc47deee1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2427b42b-4596-4ddb-8462-fdafc47deee1/Untitled.png)
+
+② 엔티티를 배치한다
+
+- 엔티티를 도출하면 엔티티를 배치한다.
+- 엔티티 배치는 중요한 엔티티를 왼쪽 상단에 배치
+
+③ 엔티티 간의 관계를 설정한다
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/268f594c-44d2-460b-bc01-d01fdbe961dc/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/268f594c-44d2-460b-bc01-d01fdbe961dc/Untitled.png)
+
+④ 관계명을 서술한다
+
+- 엔티티 간에 어떤 행위나 존재가 있는지 표현한다.
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3beb3dad-69fb-4337-af5c-4a3d95cf7c5d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3beb3dad-69fb-4337-af5c-4a3d95cf7c5d/Untitled.png)
+
+⑤ 관계 참여도를 표현한다
+
+- 관계 참여도는 한 개의 엔티티와 다른 엔티티 간의 참여하는 관계 수를 의미
+- e.g. '고객이 여러 개의 계좌를 개설할 수 있다.'
+
+⑥ 관계의 필수 여부를 표현한다
+
+- 필수는 반드시 존재해야 한다
+- e.g. '모든 고객은 반드시 하나의 계좌는 개설해야 한다.'
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20281bde-bfbd-4eea-a652-94025949ab86/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20281bde-bfbd-4eea-a652-94025949ab86/Untitled.png)
+
+(2)  ERD 작성 시 고려사항
+
+- 중요한 엔티티를 가급적 왼쪽 상단에 배치
+- ERD는 이해가 쉬워야 하고 너무 복잡하지 않아야 한다.
+
+## 데이터 모델링 고려사항
+
+(1) 데이터 모델의 독립성
+
+- 독립성이 확보된 모델은 고객의 업무 변화에 능동적으로 대응할 수 있다.
+- 독립성을 확보하기 위해서는 중복된 데이터를 제거해야 한다.
+- 데이터 중복을 제거하는 방법이 바로 정규화이다.
+
+(2) 고객 요구사항의 표현
+
+- 고객의 요구사항을 너무 복잡하지 않게 표현해야 한다.
+- 데이터 모델링으로 고객과 데이터 모델러 간에 의사소통을 할 수 있어야 한다.
+- 요구사항을 간결하고 명확하게 표현
+
+(3) 데이터 품질 확보
+
+- 데이터베이스 구축 시에 데이터 표준을 정의하고 표준 준수율을 관리해야 한다.
+- 데이터 표준을 확보해야 데이터 품질을 향상시킬 수 있다.
