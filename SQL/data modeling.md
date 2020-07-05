@@ -40,6 +40,7 @@
 
 [데이터 모델링 관점](https://www.notion.so/e874ca54c61f4fc890f4bbcd3c68291a)
 
+
 ## 데이터 모델링을 위한 ERD(Entity Relation ship Diagram)
 
 - 1976년 피터첸(Peter Chen)이 Entity Relationship Model 표기법을 만들었으며 데이터 모델링의 사실상 표준으로 사용되고 있다.
